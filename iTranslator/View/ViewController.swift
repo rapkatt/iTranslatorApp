@@ -14,13 +14,11 @@ class ViewController: UIViewController,UITextViewDelegate {
      var transTimer: Timer?
      var lang = "en-ru"
      var item: Word?
-    var secondWord:String = ""
+     var secondWord:String = ""
     
     
 
-    @IBAction func buttonTranslate(_ sender: Any) {
-        makeRequest(words: textForTranslate.text)
-    }
+    
     @IBOutlet weak var imageRus: UIImageView!
     @IBOutlet weak var imageEng: UIImageView!
     @IBOutlet weak var textForTranslate: UITextView!
@@ -39,6 +37,7 @@ class ViewController: UIViewController,UITextViewDelegate {
         }
     }
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -53,43 +52,39 @@ class ViewController: UIViewController,UITextViewDelegate {
                     switch response.result{
                     case .success(let value):
                         let json = JSON(value);
-                        let items = self.item
-                        //self.translatedText.text = json["text"][0].stringValue
+                        
                         self.secondWord = json["text"][0].stringValue
                         self.translatedText.text = self.secondWord
                         //print(self.translatedText.text)
                         let translated = self.translatedText.text
-                        try! DBManager.sharedInstance.database.write{
-                            items?.nativeWord = words
-                            items?.translatedWord = translated!
+                        let item = Word()
+                        item.nativeWord = words
+                        item.translatedWord = translated!
+                        if item.nativeWord != ""{
+                        DBManager.sharedInstance.addData(object: item)
                         }
-                       // print(items?.nativeWord)
-                    case .failure(let error):
-                        print("error")
+                    case .failure(_):
+                        print("Error")
                     }
+            }
                     
             
-            }
-        }
+    }
+    func textViewDidChange(_ textView: UITextView) {
+        refreshTimer()
+    }
     
-//    func textViewDidChange(_ textView: UITextView) {
-//        refreshTimer()
-//    }
-//
-//    func refreshTimer(){
-//        transTimer?.invalidate()
-//        transTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: false)
-//    }
-//
-//    @objc func runTimedCode(){
-//        //ServerManager.shared.translate(words: textForTranlate.text ?? "Cat")
-//        makeRequest(words: textForTranslate.text!)
-//    }
+    func refreshTimer(){
+        transTimer?.invalidate()
+        transTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: false)
+    }
     
+    @objc func runTimedCode(){
+        makeRequest(words: textForTranslate.text)
+    }
     
-//    func refreshTextFields(){
-//        self.textForTranslate.text = ""
-//        self.tester.text = ""
-//    }
-
 }
+    
+
+
+

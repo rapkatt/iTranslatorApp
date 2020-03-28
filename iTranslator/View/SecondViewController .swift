@@ -9,33 +9,49 @@
 import UIKit
 import RealmSwift
 
-class SecondViewController: UITableViewController{
+class SecondViewController:UIViewController, UICollectionViewDataSource{
+    
+  
+    
+    
+    
     
 
     var item: Word?
     var savedItems: Results<Word>!
     
     override func viewDidLoad() {
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
         if let save: Results<Word> = DBManager.sharedInstance.getDataFromDB(){
             savedItems = save
         }
     }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return savedItems.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let item = savedItems[indexPath.row]
-        configureText(for:cell, with: item)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! Container
+        let items = savedItems[indexPath.row]
+
+        configureText(for:cell,with: items)
         return cell
     }
-     func configureText(for cell: UITableViewCell, with item: Word) {
-        cell.textLabel?.text = item.nativeWord
-        cell.detailTextLabel?.text = item.translatedWord
+    
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return savedItems.count
+//    }
+//
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+//        let item = savedItems[indexPath.row]
+//        configureText(for:cell, with: item)
+//        return cell
+//    }
+     func configureText(for cell: Container, with item: Word) {
+        cell.firstText.text = item.nativeWord
+        cell.secondText.text = item.translatedWord
+//        cell.textLabel?.text = item.nativeWord
+//        cell.detailTextLabel?.text = item.translatedWord
        }
 
 }

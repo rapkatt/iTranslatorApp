@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A43EBD7CFA10EAEB6CF3F71 /* Pods_iTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBD2A5F0C38167FD5D203A9 /* Pods_iTranslator.framework */; };
+		AE2C3E7E242FB37900D6A03B /* Container .swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C3E7D242FB37900D6A03B /* Container .swift */; };
 		AE6B902B242B3756003D3D9E /* ServerManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B902A242B3756003D3D9E /* ServerManager .swift */; };
 		AE6B902D242B3AC1003D3D9E /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B902C242B3AC1003D3D9E /* Word.swift */; };
 		AE89DEC7242E298D00D4E1E1 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89DEC6242E298D00D4E1E1 /* DBManager.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		A9C5566D38833C3C15148158 /* Pods-iTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTranslator.release.xcconfig"; path = "Target Support Files/Pods-iTranslator/Pods-iTranslator.release.xcconfig"; sourceTree = "<group>"; };
+		AE2C3E7D242FB37900D6A03B /* Container .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container .swift"; sourceTree = "<group>"; };
 		AE6B902A242B3756003D3D9E /* ServerManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerManager .swift"; sourceTree = "<group>"; };
 		AE6B902C242B3AC1003D3D9E /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		AE89DEC6242E298D00D4E1E1 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				AE9889F0242A4D5600715187 /* ViewController.swift */,
 				AE89DEC8242E2CDB00D4E1E1 /* SecondViewController .swift */,
+				AE2C3E7D242FB37900D6A03B /* Container .swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 				AE9889EF242A4D5600715187 /* SceneDelegate.swift in Sources */,
 				AE6B902B242B3756003D3D9E /* ServerManager .swift in Sources */,
 				AE6B902D242B3AC1003D3D9E /* Word.swift in Sources */,
+				AE2C3E7E242FB37900D6A03B /* Container .swift in Sources */,
 				AE89DEC9242E2CDB00D4E1E1 /* SecondViewController .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
