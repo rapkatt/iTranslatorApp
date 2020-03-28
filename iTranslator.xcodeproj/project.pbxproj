@@ -9,7 +9,9 @@
 /* Begin PBXBuildFile section */
 		2A43EBD7CFA10EAEB6CF3F71 /* Pods_iTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBD2A5F0C38167FD5D203A9 /* Pods_iTranslator.framework */; };
 		AE6B902B242B3756003D3D9E /* ServerManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B902A242B3756003D3D9E /* ServerManager .swift */; };
-		AE6B902D242B3AC1003D3D9E /* word.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B902C242B3AC1003D3D9E /* word.swift */; };
+		AE6B902D242B3AC1003D3D9E /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B902C242B3AC1003D3D9E /* Word.swift */; };
+		AE89DEC7242E298D00D4E1E1 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89DEC6242E298D00D4E1E1 /* DBManager.swift */; };
+		AE89DEC9242E2CDB00D4E1E1 /* SecondViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89DEC8242E2CDB00D4E1E1 /* SecondViewController .swift */; };
 		AE9889ED242A4D5600715187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9889EC242A4D5600715187 /* AppDelegate.swift */; };
 		AE9889EF242A4D5600715187 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9889EE242A4D5600715187 /* SceneDelegate.swift */; };
 		AE9889F1242A4D5600715187 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9889F0242A4D5600715187 /* ViewController.swift */; };
@@ -21,7 +23,9 @@
 /* Begin PBXFileReference section */
 		A9C5566D38833C3C15148158 /* Pods-iTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTranslator.release.xcconfig"; path = "Target Support Files/Pods-iTranslator/Pods-iTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		AE6B902A242B3756003D3D9E /* ServerManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerManager .swift"; sourceTree = "<group>"; };
-		AE6B902C242B3AC1003D3D9E /* word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = word.swift; sourceTree = "<group>"; };
+		AE6B902C242B3AC1003D3D9E /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		AE89DEC6242E298D00D4E1E1 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		AE89DEC8242E2CDB00D4E1E1 /* SecondViewController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecondViewController .swift"; sourceTree = "<group>"; };
 		AE9889E9242A4D5600715187 /* iTranslator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTranslator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE9889EC242A4D5600715187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE9889EE242A4D5600715187 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				AE9889F0242A4D5600715187 /* ViewController.swift */,
+				AE89DEC8242E2CDB00D4E1E1 /* SecondViewController .swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,7 +113,8 @@
 				AE9889F5242A4D5B00715187 /* Assets.xcassets */,
 				AE9889F7242A4D5B00715187 /* LaunchScreen.storyboard */,
 				AE9889FA242A4D5B00715187 /* Info.plist */,
-				AE6B902C242B3AC1003D3D9E /* word.swift */,
+				AE6B902C242B3AC1003D3D9E /* Word.swift */,
+				AE89DEC6242E298D00D4E1E1 /* DBManager.swift */,
 			);
 			path = iTranslator;
 			sourceTree = "<group>";
@@ -229,10 +235,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9889F1242A4D5600715187 /* ViewController.swift in Sources */,
+				AE89DEC7242E298D00D4E1E1 /* DBManager.swift in Sources */,
 				AE9889ED242A4D5600715187 /* AppDelegate.swift in Sources */,
 				AE9889EF242A4D5600715187 /* SceneDelegate.swift in Sources */,
 				AE6B902B242B3756003D3D9E /* ServerManager .swift in Sources */,
-				AE6B902D242B3AC1003D3D9E /* word.swift in Sources */,
+				AE6B902D242B3AC1003D3D9E /* Word.swift in Sources */,
+				AE89DEC9242E2CDB00D4E1E1 /* SecondViewController .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
