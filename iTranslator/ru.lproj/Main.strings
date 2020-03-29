@@ -1,0 +1,15 @@
+/* Class = "UIButton"; normalTitle = "Show history"; ObjectID = "3Ue-or-qhX"; */
+"3Ue-or-qhX.normalTitle" = "Посмотреть историю";
+
+/* Class = "UILabel"; text = "First"; ObjectID = "CTz-Sy-7Fx"; */
+"CTz-Sy-7Fx.text" = "First";
+
+/* Class = "UINavigationItem"; title = "iTranslator"; ObjectID = "DNF-ye-x2N"; */
+"DNF-ye-x2N.title" = "iTranslator";
+
+/* Class = "UILabel"; text = "Second"; ObjectID = "Ehb-9t-31m"; */
+"Ehb-9t-31m.text" = "Second";
+
+/* Class = "UINavigationItem"; title = "iTranslator"; ObjectID = "Ur7-nE-6MZ"; */
+"Ur7-nE-6MZ.title" = "iTranslator";
+

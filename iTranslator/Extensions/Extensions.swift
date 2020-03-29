@@ -34,3 +34,15 @@ extension ViewController{
             }
     }
 }
+
+extension ViewController{
+    
+       func textViewDidChange(_ textView: UITextView) {
+           refreshTimer()
+       }
+       
+       func refreshTimer(){
+           transTimer?.invalidate()
+           transTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: false)
+       }
+}

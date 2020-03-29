@@ -12,7 +12,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController,UITextViewDelegate {
      var transTimer: Timer?
-     var lang = "en-ru"
+     var lang = NSLocalizedString("en-ru", comment: "Language label")
      var item: Word?
      var secondWord:String = ""
     let url = "https://translate.yandex.net/api/v1.5/tr.json/"
@@ -40,19 +40,22 @@ class ViewController: UIViewController,UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        pictureCheker(item: lang)
     }
-    
-    func textViewDidChange(_ textView: UITextView) {
-        refreshTimer()
-    }
-    
-    func refreshTimer(){
-        transTimer?.invalidate()
-        transTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: false)
-    }
+   
     
     @objc func runTimedCode(){
         makeRequest(words: textForTranslate.text)
+    }
+    func pictureCheker(item:String){
+        if item == "en-ru"{
+            imageEng.image = UIImage(named: "eng")
+            imageRus.image = UIImage(named: "rus")
+        }
+        else{
+            imageEng.image = UIImage(named: "rus")
+            imageRus.image = UIImage(named: "eng")
+        }
     }
     
 }
