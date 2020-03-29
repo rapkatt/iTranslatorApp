@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A43EBD7CFA10EAEB6CF3F71 /* Pods_iTranslator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDBD2A5F0C38167FD5D203A9 /* Pods_iTranslator.framework */; };
 		AE2C3E7E242FB37900D6A03B /* Container .swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C3E7D242FB37900D6A03B /* Container .swift */; };
+		AE2C3E8224305C8D00D6A03B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C3E8124305C8D00D6A03B /* Extensions.swift */; };
 		AE6B902B242B3756003D3D9E /* ServerManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B902A242B3756003D3D9E /* ServerManager .swift */; };
 		AE6B902D242B3AC1003D3D9E /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B902C242B3AC1003D3D9E /* Word.swift */; };
 		AE89DEC7242E298D00D4E1E1 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89DEC6242E298D00D4E1E1 /* DBManager.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		A9C5566D38833C3C15148158 /* Pods-iTranslator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTranslator.release.xcconfig"; path = "Target Support Files/Pods-iTranslator/Pods-iTranslator.release.xcconfig"; sourceTree = "<group>"; };
 		AE2C3E7D242FB37900D6A03B /* Container .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container .swift"; sourceTree = "<group>"; };
+		AE2C3E8124305C8D00D6A03B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AE6B902A242B3756003D3D9E /* ServerManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerManager .swift"; sourceTree = "<group>"; };
 		AE6B902C242B3AC1003D3D9E /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		AE89DEC6242E298D00D4E1E1 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
@@ -69,6 +71,30 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		AE2C3E7F24305BAC00D6A03B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AE6B902C242B3AC1003D3D9E /* Word.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AE2C3E8024305BB800D6A03B /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				AE89DEC6242E298D00D4E1E1 /* DBManager.swift */,
+			);
+			path = DBManager;
+			sourceTree = "<group>";
+		};
+		AE2C3E8324305F8400D6A03B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE2C3E8124305C8D00D6A03B /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AE6B9029242B373D003D3D9E /* ServerManager  */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +134,10 @@
 		AE9889EB242A4D5600715187 /* iTranslator */ = {
 			isa = PBXGroup;
 			children = (
+				AE2C3E8024305BB800D6A03B /* DBManager */,
+				AE2C3E7F24305BAC00D6A03B /* Model */,
 				AE6B902E242CBBF3003D3D9E /* View */,
+				AE2C3E8324305F8400D6A03B /* Extensions */,
 				AE6B9029242B373D003D3D9E /* ServerManager  */,
 				AE9889EC242A4D5600715187 /* AppDelegate.swift */,
 				AE9889EE242A4D5600715187 /* SceneDelegate.swift */,
@@ -116,8 +145,6 @@
 				AE9889F5242A4D5B00715187 /* Assets.xcassets */,
 				AE9889F7242A4D5B00715187 /* LaunchScreen.storyboard */,
 				AE9889FA242A4D5B00715187 /* Info.plist */,
-				AE6B902C242B3AC1003D3D9E /* Word.swift */,
-				AE89DEC6242E298D00D4E1E1 /* DBManager.swift */,
 			);
 			path = iTranslator;
 			sourceTree = "<group>";
@@ -238,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9889F1242A4D5600715187 /* ViewController.swift in Sources */,
+				AE2C3E8224305C8D00D6A03B /* Extensions.swift in Sources */,
 				AE89DEC7242E298D00D4E1E1 /* DBManager.swift in Sources */,
 				AE9889ED242A4D5600715187 /* AppDelegate.swift in Sources */,
 				AE9889EF242A4D5600715187 /* SceneDelegate.swift in Sources */,

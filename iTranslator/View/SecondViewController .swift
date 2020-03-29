@@ -11,12 +11,6 @@ import RealmSwift
 
 class SecondViewController:UIViewController, UICollectionViewDataSource{
     
-  
-    
-    
-    
-    
-
     var item: Word?
     var savedItems: Results<Word>!
     
@@ -36,22 +30,10 @@ class SecondViewController:UIViewController, UICollectionViewDataSource{
         configureText(for:cell,with: items)
         return cell
     }
-    
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return savedItems.count
-//    }
-//
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-//        let item = savedItems[indexPath.row]
-//        configureText(for:cell, with: item)
-//        return cell
-//    }
+
      func configureText(for cell: Container, with item: Word) {
         cell.firstText.text = item.nativeWord
         cell.secondText.text = item.translatedWord
-//        cell.textLabel?.text = item.nativeWord
-//        cell.detailTextLabel?.text = item.translatedWord
        }
 
 }

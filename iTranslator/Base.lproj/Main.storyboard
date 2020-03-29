@@ -23,17 +23,6 @@
                                     <constraint firstAttribute="height" constant="70" id="del-NX-6RT"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uf-9t-ovK">
-                                <rect key="frame" x="220" y="254" width="62" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="8Fi-li-Wf2"/>
-                                    <constraint firstAttribute="width" constant="62" id="cea-Dk-gao"/>
-                                </constraints>
-                                <state key="normal" image="Group 2"/>
-                                <connections>
-                                    <action selector="langChanger:" destination="dIc-1s-RBg" eventType="touchUpInside" id="MIc-Zf-bIx"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ue-or-qhX">
                                 <rect key="frame" x="47" y="787" width="320" height="50"/>
                                 <color key="backgroundColor" red="0.45098039215686275" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,7 +30,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="dst-kU-XX4"/>
                                     <constraint firstAttribute="height" constant="50" id="jII-DE-rMG"/>
                                 </constraints>
-                                <state key="normal" title="Посмотреть историю"/>
+                                <state key="normal" title="Show history"/>
                                 <connections>
                                     <segue destination="sgZ-fu-t9y" kind="show" id="sM6-Uh-zXr"/>
                                 </connections>
@@ -79,6 +68,17 @@
                                     <outlet property="delegate" destination="dIc-1s-RBg" id="Qpp-tv-1Ea"/>
                                 </connections>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1uf-9t-ovK">
+                                <rect key="frame" x="201" y="254" width="62" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="8Fi-li-Wf2"/>
+                                    <constraint firstAttribute="width" constant="62" id="cea-Dk-gao"/>
+                                </constraints>
+                                <state key="normal" image="Group 2"/>
+                                <connections>
+                                    <action selector="langChanger:" destination="dIc-1s-RBg" eventType="touchUpInside" id="MIc-Zf-bIx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -91,7 +91,7 @@
                             <constraint firstItem="ti2-uF-g1D" firstAttribute="leading" secondItem="2KV-9e-9K2" secondAttribute="leading" constant="8" id="YSt-NC-cDE"/>
                             <constraint firstItem="vJF-Vl-7HF" firstAttribute="top" secondItem="2KV-9e-9K2" secondAttribute="top" constant="71" id="eQh-JJ-5tf"/>
                             <constraint firstItem="4HD-ZX-CIX" firstAttribute="top" secondItem="1uf-9t-ovK" secondAttribute="bottom" constant="24" id="efG-pf-Gw0"/>
-                            <constraint firstItem="2KV-9e-9K2" firstAttribute="trailing" secondItem="1uf-9t-ovK" secondAttribute="trailing" constant="132" id="hs2-zt-l7o"/>
+                            <constraint firstItem="2KV-9e-9K2" firstAttribute="trailing" secondItem="1uf-9t-ovK" secondAttribute="trailing" constant="151" id="hs2-zt-l7o"/>
                             <constraint firstItem="fez-RZ-Stg" firstAttribute="top" secondItem="2KV-9e-9K2" secondAttribute="top" constant="82" id="jcw-UI-ExW"/>
                             <constraint firstItem="4HD-ZX-CIX" firstAttribute="leading" secondItem="ti2-uF-g1D" secondAttribute="trailing" constant="10" id="p9V-Ph-7Lm"/>
                             <constraint firstItem="2KV-9e-9K2" firstAttribute="trailing" secondItem="3Ue-or-qhX" secondAttribute="trailing" constant="47" id="vd3-GN-ZI4"/>
@@ -111,7 +111,7 @@
             </objects>
             <point key="canvasLocation" x="1915.9420289855075" y="118.52678571428571"/>
         </scene>
-        <!--Second View Controller-->
+        <!--iTranslator-->
         <scene sceneID="iq7-cd-1tq">
             <objects>
                 <viewController id="sgZ-fu-t9y" customClass="SecondViewController" customModule="iTranslator" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,10 +138,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="324" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTz-Sy-7Fx">
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="center" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTz-Sy-7Fx">
                                                     <rect key="frame" x="-4" y="8" width="333" height="42"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="333" id="4et-hs-gWR"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="333" id="4et-hs-gWR"/>
                                                         <constraint firstAttribute="height" constant="42" id="zaN-JQ-cgZ"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -151,7 +151,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehb-9t-31m">
                                                     <rect key="frame" x="-4" y="52" width="333" height="42"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="333" id="WkG-hR-UB5"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="333" id="WkG-hR-UB5"/>
                                                         <constraint firstAttribute="height" constant="42" id="adi-px-3GI"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -187,7 +187,7 @@
                         <color key="tintColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="MDz-gh-1IU"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DNF-ye-x2N" colorLabel="IBBuiltInLabel-Red"/>
+                    <navigationItem key="navigationItem" title="iTranslator" id="DNF-ye-x2N" colorLabel="IBBuiltInLabel-Red"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hNQ-3H-lqH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -198,17 +198,18 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YbF-iJ-6B3" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="sat-jH-QoF">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backIndicatorImage="arrowshape.turn.up.left" catalog="system" backIndicatorTransitionMaskImage="arrowshape.turn.up.left" id="sat-jH-QoF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.45098039215686275" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" red="0.45098039215686275" green="0.88235294117647056" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -223,6 +224,7 @@
     </scenes>
     <resources>
         <image name="Group 2" width="151" height="151"/>
+        <image name="arrowshape.turn.up.left" catalog="system" width="128" height="106"/>
         <image name="eng" width="256" height="256"/>
         <image name="rus" width="256" height="256"/>
     </resources>
