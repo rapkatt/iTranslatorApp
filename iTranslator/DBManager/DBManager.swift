@@ -15,7 +15,7 @@ class DBManager {
         return results
     }
     
-    func addData(object: Word)   {
+    func addData(object: Word){
         try! database.write {
             database.add(object)
             print("Added new object")

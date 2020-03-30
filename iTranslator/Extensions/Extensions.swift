@@ -12,37 +12,29 @@ import Alamofire
 import SwiftyJSON
 
 extension ViewController{
-        func makeRequest(words: String){
-
-            AF.request("\(url)translate?key=\(key)&lang=\(lang)&text=\(words)&ui=ru".addingPercentEncoding( withAllowedCharacters: NSCharacterSet.urlQueryAllowed)!)
-                .responseJSON{(response) in
-                    switch response.result{
-                    case .success(let value):
-                        let json = JSON(value);
-                        self.secondWord = json["text"][0].stringValue
-                        self.translatedText.text = self.secondWord
-                        let translated = self.translatedText.text
-                        let item = Word()
-                        item.nativeWord = words
-                        item.translatedWord = translated!
-                        if item.nativeWord != ""{
-                        DBManager.sharedInstance.addData(object: item)
-                        }
-                    case .failure(_):
-                        print("Error")
-                    }
+    func textViewDidChangeSelection(_ textView: UITextView) {
+        let size = CGSize(width: view.frame.width, height: .infinity)
+        let estimatedSize = textView.sizeThatFits(size)
+        
+        textView.constraints.forEach{ (constaint) in
+            if constaint.firstAttribute == .height{
+                constaint.constant = estimatedSize.height
             }
+            
+        }
     }
+    
 }
+
 
 extension ViewController{
     
-       func textViewDidChange(_ textView: UITextView) {
-           refreshTimer()
-       }
-       
-       func refreshTimer(){
-           transTimer?.invalidate()
-           transTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: false)
-       }
+    func textViewDidChange(_ textView: UITextView) {
+        refreshTimer()
+    }
+    
+    func refreshTimer(){
+        transTimer?.invalidate()
+        transTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: false)
+    }
 }

@@ -12,7 +12,7 @@
 		AE2C3E8224305C8D00D6A03B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2C3E8124305C8D00D6A03B /* Extensions.swift */; };
 		AE2C3E8924306DD500D6A03B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE2C3E8724306DD500D6A03B /* InfoPlist.strings */; };
 		AE2C3E8C2430700400D6A03B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AE2C3E8A2430700400D6A03B /* Localizable.strings */; };
-		AE6B902B242B3756003D3D9E /* ServerManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B902A242B3756003D3D9E /* ServerManager .swift */; };
+		AE45DD6C2430DE1200DC7E3A /* ServerManager .swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45DD6B2430DE1200DC7E3A /* ServerManager .swift */; };
 		AE6B902D242B3AC1003D3D9E /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE6B902C242B3AC1003D3D9E /* Word.swift */; };
 		AE89DEC7242E298D00D4E1E1 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89DEC6242E298D00D4E1E1 /* DBManager.swift */; };
 		AE89DEC9242E2CDB00D4E1E1 /* SecondViewController .swift in Sources */ = {isa = PBXBuildFile; fileRef = AE89DEC8242E2CDB00D4E1E1 /* SecondViewController .swift */; };
@@ -32,7 +32,7 @@
 		AE2C3E8624306B0300D6A03B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		AE2C3E8824306DD500D6A03B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AE2C3E8B2430700400D6A03B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		AE6B902A242B3756003D3D9E /* ServerManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerManager .swift"; sourceTree = "<group>"; };
+		AE45DD6B2430DE1200DC7E3A /* ServerManager .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ServerManager .swift"; sourceTree = "<group>"; };
 		AE6B902C242B3AC1003D3D9E /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		AE89DEC6242E298D00D4E1E1 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		AE89DEC8242E2CDB00D4E1E1 /* SecondViewController .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecondViewController .swift"; sourceTree = "<group>"; };
@@ -101,12 +101,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		AE6B9029242B373D003D3D9E /* ServerManager  */ = {
+		AE45DD6A2430DDF700DC7E3A /* ServerManager */ = {
 			isa = PBXGroup;
 			children = (
-				AE6B902A242B3756003D3D9E /* ServerManager .swift */,
+				AE45DD6B2430DE1200DC7E3A /* ServerManager .swift */,
 			);
-			path = "ServerManager ";
+			path = ServerManager;
 			sourceTree = "<group>";
 		};
 		AE6B902E242CBBF3003D3D9E /* View */ = {
@@ -140,16 +140,16 @@
 		AE9889EB242A4D5600715187 /* iTranslator */ = {
 			isa = PBXGroup;
 			children = (
+				AE45DD6A2430DDF700DC7E3A /* ServerManager */,
 				AE2C3E8024305BB800D6A03B /* DBManager */,
 				AE2C3E7F24305BAC00D6A03B /* Model */,
 				AE6B902E242CBBF3003D3D9E /* View */,
 				AE2C3E8324305F8400D6A03B /* Extensions */,
-				AE6B9029242B373D003D3D9E /* ServerManager  */,
 				AE9889EC242A4D5600715187 /* AppDelegate.swift */,
 				AE9889EE242A4D5600715187 /* SceneDelegate.swift */,
 				AE9889F2242A4D5600715187 /* Main.storyboard */,
-				AE9889F5242A4D5B00715187 /* Assets.xcassets */,
 				AE9889F7242A4D5B00715187 /* LaunchScreen.storyboard */,
+				AE9889F5242A4D5B00715187 /* Assets.xcassets */,
 				AE9889FA242A4D5B00715187 /* Info.plist */,
 				AE2C3E8A2430700400D6A03B /* Localizable.strings */,
 				AE2C3E8724306DD500D6A03B /* InfoPlist.strings */,
@@ -280,7 +280,7 @@
 				AE89DEC7242E298D00D4E1E1 /* DBManager.swift in Sources */,
 				AE9889ED242A4D5600715187 /* AppDelegate.swift in Sources */,
 				AE9889EF242A4D5600715187 /* SceneDelegate.swift in Sources */,
-				AE6B902B242B3756003D3D9E /* ServerManager .swift in Sources */,
+				AE45DD6C2430DE1200DC7E3A /* ServerManager .swift in Sources */,
 				AE6B902D242B3AC1003D3D9E /* Word.swift in Sources */,
 				AE2C3E7E242FB37900D6A03B /* Container .swift in Sources */,
 				AE89DEC9242E2CDB00D4E1E1 /* SecondViewController .swift in Sources */,

@@ -12,11 +12,10 @@ import SwiftyJSON
 
 class ViewController: UIViewController,UITextViewDelegate {
      var transTimer: Timer?
-     var lang = NSLocalizedString("en-ru", comment: "Language label")
+     
      var item: Word?
      var secondWord:String = ""
-    let url = "https://translate.yandex.net/api/v1.5/tr.json/"
-    let key = "trnsl.1.1.20200324T142745Z.2120f2a51bea64cc.727157bc6cf44fe7463be9c0e0c0d3d916116b87"
+    
     
     @IBOutlet weak var imageRus: UIImageView!
     @IBOutlet weak var imageEng: UIImageView!
@@ -25,13 +24,13 @@ class ViewController: UIViewController,UITextViewDelegate {
     @IBOutlet weak var translatedText: UITextView!
     
     @IBAction func langChanger(_ sender: Any) {
-        if lang == "en-ru"{
-            lang = "ru-en"
+        if ServerManager.shared.lang.description == "en-ru"{
+            ServerManager.shared.lang = "ru-en"
             imageEng.image = UIImage(named: "rus")
             imageRus.image = UIImage(named: "eng")
             
         }else{
-            lang = "en-ru"
+            ServerManager.shared.lang  = "en-ru"
             imageEng.image = UIImage(named: "eng")
             imageRus.image = UIImage(named: "rus")
         }
@@ -40,13 +39,25 @@ class ViewController: UIViewController,UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        pictureCheker(item: lang)
+        pictureCheker(item: ServerManager.shared.lang )
+        let textView = UITextView()
+        textView.translatesAutoresizingMaskIntoConstraints = false
+        [
+            textView.heightAnchor.constraint(equalToConstant: 50)
+            ].forEach{$0.isActive = true}
+        textView.delegate = self
+        textView.isScrollEnabled = false
     }
    
     
     @objc func runTimedCode(){
-        makeRequest(words: textForTranslate.text)
+        ServerManager.shared.makeRequest(words: textForTranslate.text, completion:setTranslateToField(translate:) )
     }
+    
+    func setTranslateToField(translate: String) {
+        translatedText.text = translate
+    }
+    
     func pictureCheker(item:String){
         if item == "en-ru"{
             imageEng.image = UIImage(named: "eng")
