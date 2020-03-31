@@ -6,7 +6,7 @@ class DBManager {
     var database: Realm
     static let sharedInstance = DBManager()
     
-    private init() {
+    init() {
         database = try! Realm()
     }
     
@@ -18,7 +18,6 @@ class DBManager {
     func addData(object: Word){
         try! database.write {
             database.add(object)
-            print("Added new object")
         }
     }
     
@@ -26,7 +25,17 @@ class DBManager {
         try!   database.write {
             database.delete(object)
         }
+        deleteItem()
     }
+    
+    func deleteItem() {
+         let result = getDataFromDB()
+         if result.count > 25 {
+             try!   database.write {
+                 database.delete(result.sorted(byKeyPath: "date", ascending: false).last!)
+             }
+         }
+     }
 }
 
     

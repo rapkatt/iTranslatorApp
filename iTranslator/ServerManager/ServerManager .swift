@@ -1,11 +1,3 @@
-//
-//  ServerManager .swift
-//  iTranslator
-//
-//  Created by Baudunov Rapkat on 3/29/20.
-//  Copyright © 2020 Baudunov Rapkat. All rights reserved.
-//
-
 import Foundation
 import Alamofire
 import RealmSwift
@@ -27,18 +19,15 @@ class ServerManager {
                 case .success(let value):
                     let json = JSON(value);
                     self.valueSaver =  json["text"][0].stringValue
-                    let item = Word()
-                    item.nativeWord = words
-                    item.translatedWord = self.valueSaver
-                    if item.nativeWord != ""{
-                        DBManager.sharedInstance.addData(object: item)
-                    }
                     DispatchQueue.main.async {
                         completion(self.valueSaver)
                     }
                 case .failure(_):
-                    print("Error")
-                }
+                    DispatchQueue.main.async {
+                        completion(self.valueSaver)
+                    }
+            }
         }
     }
+    
 }

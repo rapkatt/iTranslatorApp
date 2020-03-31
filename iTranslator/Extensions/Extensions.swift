@@ -11,23 +11,24 @@ import RealmSwift
 import Alamofire
 import SwiftyJSON
 
-extension ViewController{
-    func textViewDidChangeSelection(_ textView: UITextView) {
-        let size = CGSize(width: view.frame.width, height: .infinity)
-        let estimatedSize = textView.sizeThatFits(size)
-        
-        textView.constraints.forEach{ (constaint) in
-            if constaint.firstAttribute == .height{
-                constaint.constant = estimatedSize.height
-            }
-            
-        }
-    }
-    
-}
+//extension HistoryViewController{
+//    func textViewDidChangeSelection(_ textView: UITextView) {
+//
+//        let size = CGSize(width: view.frame.width, height: .infinity)
+//        let estimatedSize = textView.sizeThatFits(size)
+//        
+//        textView.constraints.forEach{ (constaint) in
+//            if constaint.firstAttribute == .height{
+//                constaint.constant = estimatedSize.height
+//            }
+//            
+//        }
+//    }
+//    
+//}
 
 
-extension ViewController{
+extension TranslateViewController{
     
     func textViewDidChange(_ textView: UITextView) {
         refreshTimer()
@@ -37,4 +38,15 @@ extension ViewController{
         transTimer?.invalidate()
         transTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runTimedCode), userInfo: nil, repeats: false)
     }
+    
+    func firstBritishPicture(){
+        imageEng.image = UIImage(named: "eng")
+        imageRus.image = UIImage(named: "rus")
+    }
+    func firstRussianPicture(){
+        imageEng.image = UIImage(named: "rus")
+        imageRus.image = UIImage(named: "eng")
+    }
+    
 }
+
