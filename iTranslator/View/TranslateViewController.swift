@@ -11,10 +11,10 @@ import Alamofire
 import SwiftyJSON
 
 class TranslateViewController: UIViewController,UITextViewDelegate {
-     var transTimer: Timer?
-     
-     var item: Word?
-     var secondWord:String = ""
+    var transTimer: Timer?
+    
+    var item: Word?
+    var secondWord:String = ""
     
     @IBOutlet weak var imageRus: UIImageView!
     @IBOutlet weak var imageEng: UIImageView!
@@ -25,20 +25,20 @@ class TranslateViewController: UIViewController,UITextViewDelegate {
     @IBAction func langChanger(_ sender: Any) {
         if ServerManager.shared.lang.description == "en-ru"{
             ServerManager.shared.lang = "ru-en"
-           firstRussianPicture()
+            firstRussianPicture()
             
         }else{
             ServerManager.shared.lang  = "en-ru"
             firstBritishPicture()
         }
     }
-
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         pictureCheker(item: ServerManager.shared.lang )
     }
-   
+    
     
     @objc func runTimedCode(){
         ServerManager.shared.makeRequest(words: textForTranslate.text, completion:putTranslatedWord(translate:))
@@ -66,17 +66,17 @@ class TranslateViewController: UIViewController,UITextViewDelegate {
     
     
     
-        func saveData(){
-            let item = Word()
-            item.nativeWord = textForTranslate.text
-            item.translatedWord = translatedText.text
-            if item.nativeWord != ""{
-                DBManager.sharedInstance.addData(object: item)
-            }
+    func saveData(){
+        let item = Word()
+        item.nativeWord = textForTranslate.text
+        item.translatedWord = translatedText.text
+        if item.nativeWord != ""{
+            DBManager.sharedInstance.addData(object: item)
         }
+    }
     
 }
-    
+
 
 
 
